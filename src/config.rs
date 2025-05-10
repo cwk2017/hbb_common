@@ -99,7 +99,7 @@ const CHARS: &[char] = &[
 ];
 
 pub const RENDEZVOUS_SERVERS: &[&str] = &["tb.gxbhcwk.site"];
-pub const RS_PUB_KEY: &str = "nK70uo6NP7MfUj3LYK7ZWdeFyNEKSh81V0JNt8YcyDQ=";
+pub const RS_PUB_KEY: &str = "nBh2vEekSo2uqFX1UMKq3KFDZlJC16zR4ObUNXomN3k=";
 
 pub const RENDEZVOUS_PORT: i32 = 26116;
 pub const RELAY_PORT: i32 = 26117;
