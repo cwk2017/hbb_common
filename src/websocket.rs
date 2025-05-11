@@ -275,9 +275,9 @@ mod tests {
         assert_eq!(check_ws("127.0.0.1:26115"), "ws://127.0.0.1:26118");
         assert_eq!(check_ws("127.0.0.1:26116"), "ws://127.0.0.1:26118");
         assert_eq!(check_ws("127.0.0.1:26117"), "ws://127.0.0.1:26119");
-        assert_eq!(check_ws("rustdesk.com:26115"), "ws://rustdesk.com/ws/id");
-        assert_eq!(check_ws("rustdesk.com:26116"), "ws://rustdesk.com/ws/id");
-        assert_eq!(check_ws("rustdesk.com:26117"), "ws://rustdesk.com/ws/relay");
+        assert_eq!(check_ws("tb.gxbhcwk.site:26115"), "ws://tb.gxbhcwk.site/ws/id");
+        assert_eq!(check_ws("tb.gxbhcwk.site:26116"), "ws://tb.gxbhcwk.site/ws/id");
+        assert_eq!(check_ws("tb.gxbhcwk.site:26117"), "ws://tb.gxbhcwk.site/ws/relay");
         // set relay-server without port
         Config::set_option("relay-server".to_string(), "127.0.0.1".to_string());
         Config::set_option(
@@ -296,11 +296,11 @@ mod tests {
             check_ws("[0:0:0:0:0:0:0:1]:26117"),
             "ws://[0:0:0:0:0:0:0:1]:26119"
         );
-        assert_eq!(check_ws("rustdesk.com:26115"), "wss://rustdesk.com/ws/id");
-        assert_eq!(check_ws("rustdesk.com:26116"), "wss://rustdesk.com/ws/id");
+        assert_eq!(check_ws("tb.gxbhcwk.site:26115"), "wss://rtb.gxbhcwk.site/ws/id");
+        assert_eq!(check_ws("tb.gxbhcwk.site:26116"), "wss://tb.gxbhcwk.site/ws/id");
         assert_eq!(
-            check_ws("rustdesk.com:26117"),
-            "wss://rustdesk.com/ws/relay"
+            check_ws("tb.gxbhcwk.site:26117"),
+            "wss://tb.gxbhcwk.site/ws/relay"
         );
         // set relay-server with default port
         Config::set_option("relay-server".to_string(), "127.0.0.1:26117".to_string());
@@ -309,11 +309,11 @@ mod tests {
         assert_eq!(check_ws("127.0.0.1:26117"), "ws://127.0.0.1:26119");
         // set relay-server with custom port
         Config::set_option("relay-server".to_string(), "127.0.0.1:34567".to_string());
-        assert_eq!(check_ws("rustdesk.com:26115"), "wss://rustdesk.com/ws/id");
-        assert_eq!(check_ws("rustdesk.com:26116"), "wss://rustdesk.com/ws/id");
+        assert_eq!(check_ws("tb.gxbhcwk.site:26115"), "wss://tb.gxbhcwk.site/ws/id");
+        assert_eq!(check_ws("tb.gxbhcwk.site:26116"), "wss://tb.gxbhcwk.site/ws/id");
         assert_eq!(
-            check_ws("rustdesk.com:34567"),
-            "wss://rustdesk.com/ws/relay"
+            check_ws("tb.gxbhcwk.site:34567"),
+            "wss://tb.gxbhcwk.site/ws/relay"
         );
 
         // set custom-rendezvous-server without port
